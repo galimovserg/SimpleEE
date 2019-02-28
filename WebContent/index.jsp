@@ -10,5 +10,6 @@
 <body>
 Текущее время: <%= new java.util.Date() %>
 Имя вашего хоста: <%= request.getRemoteHost() %>
+<a href="ReportUsers">Отчет по пользователям</a>
 </body>
 </html>
