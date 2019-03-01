@@ -41,7 +41,7 @@ public class ReportUsers extends HttpServlet {
 			Statement statement=cn.createStatement();
 			ResultSet res = statement.executeQuery("select * from users");
 		
-			writer.println("<html><head><title>BankUra</title></head><body>");
+			writer.println("<html><head><meta charset='utf-8'><title>BankUra</title> </head><body>");
 			writer.println("<table>");
 			writer.println("<tr><td>UID</td><td>first name</td><td>last name</td><td>patronymic</td></tr>");
 	        
@@ -49,6 +49,22 @@ public class ReportUsers extends HttpServlet {
 	        	writer.println("<tr><td>"+res.getString(1)+"</td><td>"+res.getString(2)+"</td><td>"+res.getString(3)+"</td><td>"+res.getString(4)+"</td></tr>");
 	        }
 			writer.println("</table>");
+			for(int j=0;j<1000;j++) {
+				System.out.println(Math.random()*10.);
+			}
+			float sum=0;
+			for(int j=0;j<1000;j++) {
+			for(int i=0;i<1000000;i++) {
+				sum+=Math.random()*10.0;
+			}}
+			System.out.println(sum);
+			
+			sum=0;
+			for(int j=0;j<1000;j++) {
+			for(int i=0;i<1000000;i++) {
+				sum+=Math.sqrt(Math.random()*10.0);
+			}}
+			System.out.println(sum);
 	        cn.close();
 		} catch (SQLException e) {
 				// TODO Auto-generated catch block
